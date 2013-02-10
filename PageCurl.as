@@ -29,7 +29,7 @@
 			_image1.filters = [_filter]
 			
 			addEventListener(Event.ENTER_FRAME, onFrame);
-			addEventListener(TouchEvent.TOUCH_BEGIN, onTouch);
+			//addEventListener(TouchEvent.TOUCH_BEGIN, onTouch);
 			
 			
 			addChild(_image1);
