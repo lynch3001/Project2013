@@ -5,6 +5,7 @@
 	import flash.events.Event;
 	import net.hires.debug.Stats;
 	import flash.events.TouchEvent;
+	//Multitouch.inputMode = MultitouchInputMode.NONE;
 	
 	/**
 	 * ...
@@ -29,7 +30,7 @@
 			_image1.filters = [_filter]
 			
 			addEventListener(Event.ENTER_FRAME, onFrame);
-			//addEventListener(TouchEvent.TOUCH_BEGIN, onTouch);
+			addEventListener(TouchEvent.TOUCH_BEGIN, onTouch);
 			
 			
 			addChild(_image1);
@@ -46,6 +47,11 @@
 			
 			_filter.setPageCurl(10 - dist*5, ang);
 			_image1.filters = [_filter];
+			
+		}
+		
+		public function onTouch(e:TouchEvent):void
+		{
 			
 		}
 		
